@@ -30,7 +30,7 @@ A tree is created by entering the location data and tree species of a tree.(Defa
 Players can plant a tree in a pot or space on the campus map using seeds.
 
 ###### How to grow trees
-The tree grows every time the user uses an item for growth.
+The tree grows every time the user uses an item for growth which users can get by solving problems
 
 ###### What players can get
 Seeds: Seeds are used to create their own maps.
