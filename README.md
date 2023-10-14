@@ -35,6 +35,7 @@ The tree grows every time the user uses an item for growth.
 ###### What players can get
 Seeds: Seeds are used to create their own maps.
             -> Players can obtain seeds through activities such as entering tree data or discovering new trees.
-Bedge:
 
-Items for tree growth
+Badge:
+
+Items for tree growth:
