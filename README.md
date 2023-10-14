@@ -2,7 +2,7 @@
 De Anza College Hackathon, 2023 Oct
 Members: Jin, Theo, Xixian
 
-###### H4Content draft
+###### H4 Content draft
 
 ###### H6Summary
 An open-world game based on exploration games that depict the treeless De Anza campus in graphics. Find trees in reality and plant them in the virtual world.
