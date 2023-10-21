@@ -1,18 +1,18 @@
-<!-- quiz.html -->
-<!DOCTYPE html>
 <html>
 <head>
     <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="quiz.js" defer></script>
     <title>Quiz Page</title>
 </head>
 <body>
     <div class="quiz-container">
-        <h2>Quiz!</h2>
-        <form action="/submitQuiz" method="post">
-            <label for="answer">What is 2 + 2?</label>
+        <h2 id="question-title">Question</h2>
+        <form id="quiz-form" onsubmit="checkAnswer(event)">
+            <label for="answer" id="question-label">Loading...</label>
             <input type="text" name="answer" id="answer">
             <button type="submit">Submit</button>
         </form>
+        <div id="score">Score: 0</div>
     </div>
 </body>
 </html>
