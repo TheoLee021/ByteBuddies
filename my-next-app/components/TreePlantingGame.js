@@ -34,7 +34,13 @@ function TreePlantingGame() {
   };
 
   return (
-    <div>
+    <div style={{
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center', // 가로 중앙 정렬
+      justifyContent: 'center', // 세로 중앙 정렬
+      height: '100vh' // 높이를 뷰포트의 100%로 설정
+  }}>
       <h1>Planting Tree Game</h1>
       <p>Seeds: {score}</p>
       <button onClick={handlePlantMode}>Plant a tree (Cost: 1)</button>
