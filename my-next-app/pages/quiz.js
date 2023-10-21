@@ -52,24 +52,26 @@ function QuizPage() {
   if (!questionData) return <div>Loading...</div>;
 
   return (
-    <div className="quiz-container">
-      <h2 id="question-title">Question</h2>
-      <form id="quiz-form" onSubmit={checkAnswer}>
-        <label htmlFor="answer" id="question-label">{decodeHtml(questionData.question)}</label>
-        <input 
-          type="text" 
-          name="answer" 
-          id="answer" 
-          value={userAnswer} 
-          onChange={(e) => setUserAnswer(e.target.value)} 
-        />
-        <button type="submit">Submit</button>
-      </form>
-      <div id="score">Score: {score}</div>
-      <div>Answer (For Testing): {decodeHtml(questionData.correct_answer)}</div>
-      <button onClick={exitQuiz}>Exit Quiz</button>
+    <div className="quizBackground">
+        <div className="quiz-container">
+            <h2 id="question-title">Question</h2>
+            <form id="quiz-form" onSubmit={checkAnswer}>
+                <label htmlFor="answer" id="question-label">{decodeHtml(questionData.question)}</label>
+                <input 
+                    type="text" 
+                    name="answer" 
+                    id="answer" 
+                    value={userAnswer} 
+                    onChange={(e) => setUserAnswer(e.target.value)} 
+                />
+                <button type="submit">Submit</button>
+            </form>
+            <div id="score">Score: {score}</div>
+            <div>Answer (For Testing): {decodeHtml(questionData.correct_answer)}</div>
+            <button onClick={exitQuiz}>Exit Quiz</button>
+        </div>
     </div>
-  );
+);
 }
 
 export default QuizPage;
