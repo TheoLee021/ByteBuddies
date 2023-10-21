@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "export": "next build && next export"
   },
   "dependencies": {
     "react": "^18",
@@ -24,4 +25,5 @@
     "eslint": "^8",
     "eslint-config-next": "13.5.6"
   }
+  
 }
