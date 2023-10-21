@@ -6,14 +6,20 @@ function TreePlantingGame() {
     const savedScore = localStorage.getItem('quizScore');
     return savedScore ? parseInt(savedScore, 0) : 10;
   });
-  
-  const [trees, setTrees] = useState([]);
+
+  const [trees, setTrees] = useState(() => {
+    const savedTrees = localStorage.getItem('trees');
+    return savedTrees ? JSON.parse(savedTrees) : [];
+  });
+
   const [isPlantingMode, setIsPlantingMode] = useState(false);
 
   useEffect(() => {
     // 점수 상태가 변경될 때마다 localStorage에 업데이트
     localStorage.setItem('quizScore', score);
-  }, [score]);
+    // 나무 상태가 변경될 때마다 localStorage에 업데이트
+    localStorage.setItem('trees', JSON.stringify(trees));
+  }, [score, trees]);
 
   const handlePlantMode = () => {
     if (score >= 1) {
@@ -37,10 +43,10 @@ function TreePlantingGame() {
     <div style={{
       display: 'flex',
       flexDirection: 'column',
-      alignItems: 'center', // 가로 중앙 정렬
-      justifyContent: 'center', // 세로 중앙 정렬
-      height: '100vh' // 높이를 뷰포트의 100%로 설정
-  }}>
+      alignItems: 'center',
+      justifyContent: 'center',
+      height: '100vh'
+    }}>
       <h1>Planting Tree Game</h1>
       <p>Seeds: {score}</p>
       <button onClick={handlePlantMode}>Plant a tree (Cost: 1)</button>
