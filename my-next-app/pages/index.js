@@ -19,7 +19,7 @@ function Home() {
       </form>
       {/* non-member 버튼에 Link 컴포넌트 적용 */}
       <Link href="/menu">
-        <button className="non-member-btn">non-member</button>
+        <button className="non-member-btn">Non-member</button>
       </Link>
     </div>
   );
