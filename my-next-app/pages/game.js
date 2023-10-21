@@ -1,5 +1,5 @@
 import TreePlantingGame from '../components/TreePlantingGame';
-import '../styles/TreePlantingGame.css';
+import '../styles/style.css';
 
 function GamePage() {
     return (
