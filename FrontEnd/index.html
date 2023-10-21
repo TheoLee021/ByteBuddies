@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>Login Page</title>
+    <style>
+        .error {
+            color: red;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="login-container">
+        <h2>Login</h2>
+        <form id="login-form" action="/login" method="post">
+            <label for="username">Username:</label>
+            <input type="text" name="username" id="username" required>
+            <br>
+            <label for="password">Password:</label>
+            <input type="password" name="password" id="password" required>
+            <br>
+            <button type="submit">Login</button>
+            <a href="signup.html" class="signup-btn">Sign Up</a>
+            <div id="error-message" class="error"></div>
+        </form>
+    </div>
+
+    <!-- script.js 파일 링크 -->
+    <script src="script.js"></script>
+</body>
+
+</html>
