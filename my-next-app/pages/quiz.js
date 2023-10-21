@@ -12,7 +12,7 @@ function QuizPage() {
     // 로컬 스토리지에서 점수를 가져옵니다.
     const savedScore = localStorage.getItem('quizScore');
     if (savedScore) {
-      setScore(parseInt(savedScore, 10)); // 문자열을 숫자로 변환합니다.
+      setScore(parseInt(savedScore, 0)); // 문자열을 숫자로 변환합니다.
     }
 
     fetchQuestion();

@@ -4,7 +4,7 @@ import Link from 'next/link';
 function TreePlantingGame() {
   const [score, setScore] = useState(() => {
     const savedScore = localStorage.getItem('quizScore');
-    return savedScore ? parseInt(savedScore, 10) : 10;
+    return savedScore ? parseInt(savedScore, 0) : 10;
   });
   
   const [trees, setTrees] = useState([]);
@@ -44,7 +44,7 @@ function TreePlantingGame() {
         ))}
       </div>
       <Link href="/menu" passHref>
-        <button>나가기</button>
+        <button>Exit</button>
       </Link>
     </div>
   );

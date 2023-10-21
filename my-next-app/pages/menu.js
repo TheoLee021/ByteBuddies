@@ -8,7 +8,7 @@ function MenuPage() {
   useEffect(() => {
     const savedScore = localStorage.getItem('quizScore');
     if (savedScore) {
-      setScore(parseInt(savedScore, 10));
+      setScore(parseInt(savedScore, 0));
     }
   }, []);
 
